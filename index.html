@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en-US">
 <head>
     <meta charset='utf-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
@@ -14,7 +14,7 @@
     </h1>
     <div id="content">
         <div v-if="state === 'introducing'">
-            <input v-model="userName" placeholder="Please enter your name" type="text"/>
+            <input v-model="userName" placeholder="Please enter your name" type="text" aria-label="Your name"/>
             <button @click="state = 'prepping'" class="submit-button">That's my name!</button>
         </div>
         <div v-else-if="state === 'prepping'">

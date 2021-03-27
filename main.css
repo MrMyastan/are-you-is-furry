@@ -70,8 +70,8 @@ input[type=text] {
 }
 
 .submit-button {
-    appearance: none;
     -webkit-appearance: none;
+    appearance: none;
     padding: 10px;
     border: 0;
     background-color: #3c52d0;
