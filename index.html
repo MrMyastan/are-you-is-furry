@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>AYIF Personality Test</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js'></script>
+</head>
+<body>
+    <h1>
+        AYIF Personality Test
+    </h1>
+    <div id="content">
+        <div v-if="state === 'introducing'">
+            <input v-model="userName" placeholder="Please enter your name" type="text"/>
+            <button @click="state = 'prepping'" class="submit-button">That's my name!</button>
+        </div>
+        <div v-else-if="state === 'prepping'">
+            <p id="preamble">
+                Nice to meet you {{ userName }}, this personality test was rigorously designed to quantitatively determine your personality type. 
+                We consulted a panel of experts ranging from biologists, psychologists, physicians, and even zoologists to design this test, and 
+                each question was created to help us determine what kind of personality you have. All questions are rated from "Strongly Disagree" 
+                to "Strongly Agree". It should take approximately 10 minutes to complete the quiz. Ready?
+            </p>
+            <button @click="state = 'testing'" class="submit-button" id="ready">Ready!</button>
+        </div>
+        <div v-else-if="state === 'testing'">
+            <p>
+                Strongly Disagree (Red) <br> &#60;-&#62; <br> Strongly Agree (Green)
+            </p>
+            <question v-for="(prompt, index) in questions" :key="index" :index="index" :question="prompt"></question>
+            <button @click="submitTest()" class="submit-button" id="test-submit">Submit Test</button>
+        </div>
+        <div v-else-if="state === 'processing'">
+            <p>
+                Thank you for taking our personality test. We are processing your results...
+            </p>
+            <div class="hollow-circle" id="spinner"></div>
+        </div>
+        <div v-else-if="state === 'results'">
+            <p>
+                Processing finished. The results of your personality test are below:
+            </p>
+            <button @click="revealResult()" :class="{ 'submit-button': true, result: isRevealed }" id="results-box">{{ resultText }}</button>
+        </div>
+    </div>
+    <script src='main.js'></script>
+</body>
+</html>
