@@ -14,8 +14,8 @@
     </h1>
     <div id="content">
         <div v-if="state === 'introducing'">
-            <input v-model="userName" placeholder="Please enter your name" type="text" aria-label="Your name"/>
-            <button @click="state = 'prepping'" class="submit-button">That's my name!</button>
+            <input v-model="userName" placeholder="Please enter your name" type="text" class="vert-align-middle" aria-label="Your name"/>
+            <button @click="state = 'prepping'" class="submit-button vert-align-middle">That's my name!</button>
         </div>
         <div v-else-if="state === 'prepping'">
             <p id="preamble">

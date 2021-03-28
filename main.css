@@ -119,3 +119,7 @@ h1 {
 p {
     padding: 0 7px;
 }
+
+.vert-align-middle {
+    vertical-align: middle;
+}
