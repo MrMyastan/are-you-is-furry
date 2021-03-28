@@ -5,28 +5,38 @@ Vue.component("question", {
             styles: [
                 {
                     borderColor: "#FF3333",
-                    width: "120px",
-                    height: "120px"
+                    maxWidth: "120px",
+                    maxHeight: "120px",
+                    width: "19vw",
+                    height: "19vw"
                 },
                 {
                     borderColor: "#F86E6E",
-                    width: "100px",
-                    height: "100px"
+                    maxWidth: "100px",
+                    maxHeight: "100px",
+                    width: "16vw",
+                    height: "16vw"
                 },
                 {
                     borderColor: "#c3b296",
-                    width: "80px",
-                    height: "80px"
+                    maxWidth: "80px",
+                    maxHeight: "80px",
+                    width: "13vw",
+                    height: "13vw"
                 },
                 {
                     borderColor: "#75e067",
-                    width: "100px",
-                    height: "100px"
+                    maxWidth: "100px",
+                    maxHeight: "100px",
+                    width: "16vw",
+                    height: "16vw"
                 },
                 {
                     borderColor: "#48FF31",
-                    width: "120px",
-                    height: "120px"
+                    maxWidth: "120px",
+                    maxHeight: "120px",
+                    width: "19vw",
+                    height: "19vw"
                 },
             ]
         }
