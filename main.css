@@ -52,10 +52,10 @@ body {
     border: none;
     padding: 0px 4px;
 }
-}
 
-button:focus {
+.answer-buttons:focus {
     outline: none;
+    filter: drop-shadow(4px 4px 5px rgb(0 0 0 / 35%));
 }
 
 *, *:before, *:after {
